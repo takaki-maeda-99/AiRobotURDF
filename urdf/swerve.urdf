@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="swerve">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.2264 0.25 0.083214"
+        rpy="0 0 0" />
+      <mass
+        value="3.0006" />
+      <inertia
+        ixx="0.0079644"
+        ixy="1.5585E-19"
+        ixz="1.8602E-19"
+        iyy="0.0054382"
+        iyz="1.9492E-18"
+        izz="0.01286" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://swerve/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://swerve/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="steer3">
+    <inertial>
+      <origin
+        xyz="4.4409E-15 1.7208E-15 0.051772"
+        rpy="0 0 0" />
+      <mass
+        value="0.2218" />
+      <inertia
+        ixx="0.00021124"
+        ixy="-3.5065E-07"
+        ixz="8.9284E-21"
+        iyy="0.00019593"
+        iyz="-7.8759E-20"
+        izz="0.00027215" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://swerve/meshes/steer3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://swerve/meshes/steer3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="steer3"
+    type="continuous">
+    <origin
+      xyz="0.0719999999999939 0.428 0.0269999999999998"
+      rpy="0 0 -0.289448210408933" />
+    <parent
+      link="base_link" />
+    <child
+      link="steer3" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="wheel3">
+    <inertial>
+      <origin
+        xyz="6.9389E-17 4.4131E-15 -1.9429E-15"
+        rpy="0 0 0" />
+      <mass
+        value="0.76476" />
+      <inertia
+        ixx="0.00039462"
+        ixy="3.0796E-09"
+        ixz="-1.3459E-07"
+        iyy="0.00039476"
+        iyz="-6.4013E-06"
+        izz="0.00067438" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://swerve/meshes/wheel3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.68627 0.65882 0.63922 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://swerve/meshes/wheel3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wheel3"
+    type="continuous">
+    <origin
+      xyz="0 0 0.015"
+      rpy="1.5708 1.5498 0" />
+    <parent
+      link="steer3" />
+    <child
+      link="wheel3" />
+    <axis
+      xyz="0 0 1" />
+    <dynamics
+      friction="0.4" />
+  </joint>
+  <link
+    name="steer1">
+    <inertial>
+      <origin
+        xyz="0 0 0.051772"
+        rpy="0 0 0" />
+      <mass
+        value="0.2218" />
+      <inertia
+        ixx="0.00021125"
+        ixy="2.3717E-20"
+        ixz="-4.7345E-20"
+        iyy="0.00019592"
+        iyz="-1.0528E-20"
+        izz="0.00027215" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://swerve/meshes/steer1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://swerve/meshes/steer1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="steer1"
+    type="continuous">
+    <origin
+      xyz="0.428 0.0719999999999983 0.0269999999999999"
+      rpy="0 0 2.97398100734455" />
+    <parent
+      link="base_link" />
+    <child
+      link="steer1" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="wheel1">
+    <inertial>
+      <origin
+        xyz="-1.1102E-16 -1.1102E-16 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.76476" />
+      <inertia
+        ixx="0.00039462"
+        ixy="-5.4634E-20"
+        ixz="-3.3881E-20"
+        iyy="0.00039462"
+        iyz="3.0493E-20"
+        izz="0.00067452" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://swerve/meshes/wheel1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.68627 0.65882 0.63922 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://swerve/meshes/wheel1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wheel1"
+    type="continuous">
+    <origin
+      xyz="0 0 0.015"
+      rpy="-1.5708 -0.77448 -3.1416" />
+    <parent
+      link="steer1" />
+    <child
+      link="wheel1" />
+    <axis
+      xyz="0 0 1" />
+    <dynamics
+      friction="0.4" />
+  </joint>
+  <link
+    name="steer2">
+    <inertial>
+      <origin
+        xyz="-5.55111512312578E-17 -1.11022302462516E-16 0.0517722817308295"
+        rpy="0 0 0" />
+      <mass
+        value="0.221804775243313" />
+      <inertia
+        ixx="0.000211251147171327"
+        ixy="-1.6940658945086E-20"
+        ixz="-2.80681799882007E-20"
+        iyy="0.000195922267849405"
+        iyz="3.54895578353781E-20"
+        izz="0.000272151766439535" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://swerve/meshes/steer2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://swerve/meshes/steer2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="steer2"
+    type="continuous">
+    <origin
+      xyz="0.428000000000003 0.427999999999998 0.0269999999999999"
+      rpy="0 0 2.94603516749401" />
+    <parent
+      link="base_link" />
+    <child
+      link="steer2" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="wheel2">
+    <inertial>
+      <origin
+        xyz="-0.0128179063296511 -0.0126768007527251 4.44089209850063E-16"
+        rpy="0 0 0" />
+      <mass
+        value="0.764764182848668" />
+      <inertia
+        ixx="0.000394618318349911"
+        ixy="-2.56227466544426E-20"
+        ixz="-7.16589873377138E-19"
+        iyy="0.000394618318349911"
+        iyz="4.81114714040443E-19"
+        izz="0.000674522009272522" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://swerve/meshes/wheel2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.686274509803922 0.658823529411765 0.63921568627451 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://swerve/meshes/wheel2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wheel2"
+    type="continuous">
+    <origin
+      xyz="0.01 0 0"
+      rpy="-1.5708 1.3789 3.1416" />
+    <parent
+      link="steer2" />
+    <child
+      link="wheel2" />
+    <axis
+      xyz="0 0 1" />
+    <dynamics
+      friction="0.4" />
+  </joint>
+  <link
+    name="steer4">
+    <inertial>
+      <origin
+        xyz="6.93889390390723E-18 0 0.0517722817308295"
+        rpy="0 0 0" />
+      <mass
+        value="0.221804775243313" />
+      <inertia
+        ixx="0.000210007818064125"
+        ixy="-4.18485060341668E-06"
+        ixz="4.4154238094637E-20"
+        iyy="0.000197165596956607"
+        iyz="2.67472215294233E-20"
+        izz="0.000272151766439536" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://swerve/meshes/steer4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://swerve/meshes/steer4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="steer4"
+    type="continuous">
+    <origin
+      xyz="0.072 0.0719999999999996 0.027"
+      rpy="0 0 2.25169507822681" />
+    <parent
+      link="base_link" />
+    <child
+      link="steer4" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="wheel4">
+    <inertial>
+      <origin
+        xyz="7.07767178198537E-16 -7.35522753814166E-16 2.63677968348475E-16"
+        rpy="0 0 0" />
+      <mass
+        value="0.764764182848667" />
+      <inertia
+        ixx="0.000399446152339061"
+        ixy="-9.28970422225814E-06"
+        ixz="3.52380755314603E-05"
+        iyy="0.000412493540391718"
+        iyz="-6.78050031928476E-05"
+        izz="0.000651818953241564" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://swerve/meshes/wheel4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.686274509803922 0.658823529411765 0.63921568627451 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://swerve/meshes/wheel4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wheel4"
+    type="continuous">
+    <origin
+      xyz="0 0 0.015"
+      rpy="-1.5708 1.0915 -3.1416" />
+    <parent
+      link="steer4" />
+    <child
+      link="wheel4" />
+    <axis
+      xyz="0 0 1" />
+    <dynamics
+      friction="0.4" />
+  </joint>
+</robot>
