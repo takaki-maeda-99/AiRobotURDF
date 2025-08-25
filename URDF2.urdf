@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="URDF2">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.226401216207925 0.0832142996809845 -0.250000000000001"
+        rpy="0 0 0" />
+      <mass
+        value="3.00064129669064" />
+      <inertia
+        ixx="0.00796442280563065"
+        ixy="1.36891994400365E-19"
+        ixz="-3.3881317890172E-19"
+        iyy="0.0128600718019731"
+        iyz="-1.58754965749825E-18"
+        izz="0.00543817220574471" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF2/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF2/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="st_fr">
+    <inertial>
+      <origin
+        xyz="-5.55111512312578E-17 0 -0.0192277182691706"
+        rpy="0 0 0" />
+      <mass
+        value="0.221804775243313" />
+      <inertia
+        ixx="0.000211251147171327"
+        ixy="1.44405179403711E-19"
+        ixz="8.59309424235824E-21"
+        iyy="0.000195922267849405"
+        iyz="-1.73386050856083E-21"
+        izz="0.000272151766439536" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF2/meshes/st_fr.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF2/meshes/st_fr.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="st_fr"
+    type="fixed">
+    <origin
+      xyz="0.427999999999999 0.0720000000000044 0.098"
+      rpy="0 0 3.14159265358979" />
+    <parent
+      link="base_link" />
+    <child
+      link="st_fr" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="wh_fr">
+    <inertial>
+      <origin
+        xyz="5.55111512312578E-17 -3.33066907387547E-16 -2.77555756156289E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.764764182848667" />
+      <inertia
+        ixx="0.000394618318349911"
+        ixy="-2.71050543121414E-20"
+        ixz="-2.70957328763451E-18"
+        iyy="0.000394618318349911"
+        iyz="-8.26225347607718E-20"
+        izz="0.000674522009272522" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF2/meshes/wh_fr.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.686274509803922 0.658823529411765 0.63921568627451 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF2/meshes/wh_fr.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wh_fr"
+    type="continuous">
+    <origin
+      xyz="0 0 -0.056"
+      rpy="-1.57079632679489 -0.316982240676282 3.14159265358979" />
+    <parent
+      link="st_fr" />
+    <child
+      link="wh_fr" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="st_fl">
+    <inertial>
+      <origin
+        xyz="0 1.11022302462516E-16 -0.0192277182691706"
+        rpy="0 0 0" />
+      <mass
+        value="0.221804775243313" />
+      <inertia
+        ixx="0.000211251147171327"
+        ixy="1.48185132701521E-19"
+        ixz="-1.57025903187722E-20"
+        iyy="0.000195922267849405"
+        iyz="-8.70332379647489E-20"
+        izz="0.000272151766439536" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF2/meshes/st_fl.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF2/meshes/st_fl.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="st_fl"
+    type="fixed">
+    <origin
+      xyz="0.427999999999993 0.428000000000008 0.098"
+      rpy="0 0 3.14159265358979" />
+    <parent
+      link="base_link" />
+    <child
+      link="st_fl" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="wh_fl">
+    <inertial>
+      <origin
+        xyz="-5.20417042793042E-16 -1.11022302462516E-16 -5.55111512312578E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.764764182848668" />
+      <inertia
+        ixx="0.000394618318349911"
+        ixy="1.35525271560716E-20"
+        ixz="-5.05597455100933E-19"
+        iyy="0.000394618318349911"
+        iyz="-3.3275654132207E-19"
+        izz="0.000674522009272522" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF2/meshes/wh_fl.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.686274509803922 0.658823529411765 0.63921568627451 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF2/meshes/wh_fl.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wh_fl"
+    type="continuous">
+    <origin
+      xyz="0 0 -0.056"
+      rpy="-1.57079632679491 1.37893541128008 3.14159265358979" />
+    <parent
+      link="st_fl" />
+    <child
+      link="wh_fl" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="st_bl">
+    <inertial>
+      <origin
+        xyz="0 0 -0.0192277182691706"
+        rpy="0 0 0" />
+      <mass
+        value="0.221804775243313" />
+      <inertia
+        ixx="0.000211251147171327"
+        ixy="1.53485357990453E-19"
+        ixz="-6.36602024298163E-21"
+        iyy="0.000195922267849405"
+        iyz="-8.25827275306171E-20"
+        izz="0.000272151766439536" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF2/meshes/st_bl.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF2/meshes/st_bl.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="st_bl"
+    type="fixed">
+    <origin
+      xyz="0.0719999999999909 0.428000000000001 0.098"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="st_bl" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="wh_bl">
+    <inertial>
+      <origin
+        xyz="7.63278329429795E-17 3.08086889333481E-15 4.9960036108132E-16"
+        rpy="0 0 0" />
+      <mass
+        value="0.764764182848667" />
+      <inertia
+        ixx="0.00039461831834991"
+        ixy="8.470329472543E-22"
+        ixz="9.64554885113479E-20"
+        iyy="0.00039461831834991"
+        iyz="2.87673481551354E-18"
+        izz="0.000674522009272521" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF2/meshes/wh_bl.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.686274509803922 0.658823529411765 0.63921568627451 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF2/meshes/wh_bl.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wh_bl"
+    type="continuous">
+    <origin
+      xyz="0 0 -0.056"
+      rpy="1.5707963267949 1.5497746785967 0" />
+    <parent
+      link="st_bl" />
+    <child
+      link="wh_bl" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="st_br">
+    <inertial>
+      <origin
+        xyz="1.38777878078145E-17 0 -0.0192277182691705"
+        rpy="0 0 0" />
+      <mass
+        value="0.221804775243313" />
+      <inertia
+        ixx="0.000211251147171327"
+        ixy="1.67216368223617E-19"
+        ixz="-2.19014072580611E-20"
+        iyy="0.000195922267849405"
+        iyz="-1.68727087115487E-20"
+        izz="0.000272151766439536" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF2/meshes/st_br.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF2/meshes/st_br.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="st_br"
+    type="fixed">
+    <origin
+      xyz="0.071999999999999 0.0720000000000007 0.098"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="st_br" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="wh_br">
+    <inertial>
+      <origin
+        xyz="1.29063426612674E-15 8.04911692853238E-16 -1.38777878078145E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.764764182848667" />
+      <inertia
+        ixx="0.000394618318349911"
+        ixy="9.48676900924816E-20"
+        ixz="-2.38221637064903E-18"
+        iyy="0.000394618318349911"
+        iyz="-1.50429089505785E-18"
+        izz="0.000674522009272522" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF2/meshes/wh_br.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.686274509803922 0.658823529411765 0.63921568627451 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF2/meshes/wh_br.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wh_br"
+    type="continuous">
+    <origin
+      xyz="0 0 -0.056"
+      rpy="-1.5707963267949 -0.57401915441884 3.14159265358979" />
+    <parent
+      link="st_br" />
+    <child
+      link="wh_br" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+</robot>
