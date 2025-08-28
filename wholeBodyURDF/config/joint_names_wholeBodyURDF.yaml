@@ -1,0 +1,1 @@
+controller_joint_names: ['', 'st_fr', 'wh_fr', 'st_fl', 'wh_fl', 'st_bl', 'wh_bl', 'st_br', 'wh_br', 'arm_y', 'arm_x', 'arm_theta', 'arm_fl', 'arm_fr', ]

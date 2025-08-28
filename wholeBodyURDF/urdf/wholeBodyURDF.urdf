@@ -1,0 +1,920 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="wholeBodyURDF">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.0063640587218205 0.00344444503199209 0.131744288819174"
+        rpy="0 0 0" />
+      <mass
+        value="3.60307372978046" />
+      <inertia
+        ixx="0.0187833045283993"
+        ixy="8.04052581274296E-19"
+        ixz="4.08447495570179E-18"
+        iyy="0.0161653640601633"
+        iyz="4.64404314070441E-07"
+        izz="0.0131334918251515" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wholeBodyURDF/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wholeBodyURDF/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="st_fr">
+    <inertial>
+      <origin
+        xyz="-5.55111512312578E-17 1.38777878078145E-17 0.0517722817308295"
+        rpy="0 0 0" />
+      <mass
+        value="0.221804775243313" />
+      <inertia
+        ixx="0.000211251147171327"
+        ixy="1.61608127994414E-19"
+        ixz="1.3964782722507E-21"
+        iyy="0.000195922267849405"
+        iyz="-2.06510424102861E-20"
+        izz="0.000272151766439536" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wholeBodyURDF/meshes/st_fr.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wholeBodyURDF/meshes/st_fr.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="st_fr"
+    type="continuous">
+    <origin
+      xyz="0.177999999999999 -0.177999999999995 0.0269999999999998"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="st_fr" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="wh_fr">
+    <inertial>
+      <origin
+        xyz="0 2.77555756156289E-17 1.38777878078145E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.764764182848667" />
+      <inertia
+        ixx="0.000394618318349911"
+        ixy="0"
+        ixz="-2.69756475630885E-18"
+        iyy="0.000394618318349911"
+        iyz="-9.23310090821401E-19"
+        izz="0.000674522009272522" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wholeBodyURDF/meshes/wh_fr.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.686274509803922 0.658823529411765 0.63921568627451 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wholeBodyURDF/meshes/wh_fr.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wh_fr"
+    type="continuous">
+    <origin
+      xyz="0 0 0.015"
+      rpy="-1.5707963267949 -0.316982240676282 3.14159265358979" />
+    <parent
+      link="st_fr" />
+    <child
+      link="wh_fr" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="st_fl">
+    <inertial>
+      <origin
+        xyz="0 5.55111512312578E-17 0.0517722817308295"
+        rpy="0 0 0" />
+      <mass
+        value="0.221804775243313" />
+      <inertia
+        ixx="0.000211251147171327"
+        ixy="1.64918956145697E-19"
+        ixz="-6.94850311231198E-21"
+        iyy="0.000195922267849405"
+        iyz="-1.6213539128053E-20"
+        izz="0.000272151766439536" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wholeBodyURDF/meshes/st_fl.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wholeBodyURDF/meshes/st_fl.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="st_fl"
+    type="continuous">
+    <origin
+      xyz="0.177999999999997 0.178000000000005 0.0269999999999998"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="st_fl" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="wh_fl">
+    <inertial>
+      <origin
+        xyz="4.16333634234434E-17 -1.11022302462516E-16 -5.55111512312578E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.764764182848668" />
+      <inertia
+        ixx="0.000394618318349912"
+        ixy="0"
+        ixz="-5.76769788137037E-19"
+        iyy="0.000394618318349912"
+        iyz="2.82484500819834E-18"
+        izz="0.000674522009272523" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wholeBodyURDF/meshes/wh_fl.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.686274509803922 0.658823529411765 0.63921568627451 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wholeBodyURDF/meshes/wh_fl.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wh_fl"
+    type="continuous">
+    <origin
+      xyz="0 0 0.015"
+      rpy="-1.5707963267949 1.37893541128007 3.14159265358979" />
+    <parent
+      link="st_fl" />
+    <child
+      link="wh_fl" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="st_bl">
+    <inertial>
+      <origin
+        xyz="1.01307850997046E-15 -2.22044604925031E-16 0.0517722817308294"
+        rpy="0 0 0" />
+      <mass
+        value="0.221804775243313" />
+      <inertia
+        ixx="0.000211251147171327"
+        ixy="1.73641087609267E-19"
+        ixz="2.22370021077419E-21"
+        iyy="0.000195922267849405"
+        iyz="-8.10200439331161E-20"
+        izz="0.000272151766439536" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wholeBodyURDF/meshes/st_bl.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wholeBodyURDF/meshes/st_bl.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="st_bl"
+    type="continuous">
+    <origin
+      xyz="-0.178000000000007 0.178000000000001 0.0269999999999999"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="st_bl" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="wh_bl">
+    <inertial>
+      <origin
+        xyz="4.85722573273506E-17 1.01307850997046E-15 1.66533453693773E-16"
+        rpy="0 0 0" />
+      <mass
+        value="0.764764182848668" />
+      <inertia
+        ixx="0.000394618318349911"
+        ixy="5.9292306307801E-21"
+        ixz="3.25200755217582E-20"
+        iyy="0.000394618318349911"
+        iyz="2.91345943486874E-18"
+        izz="0.000674522009272522" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wholeBodyURDF/meshes/wh_bl.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.686274509803922 0.658823529411765 0.63921568627451 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wholeBodyURDF/meshes/wh_bl.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wh_bl"
+    type="continuous">
+    <origin
+      xyz="0 0 0.015"
+      rpy="1.57079632679493 1.5497746785967 0" />
+    <parent
+      link="st_bl" />
+    <child
+      link="wh_bl" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="st_br">
+    <inertial>
+      <origin
+        xyz="-4.16333634234434E-17 0 0.0517722817308294"
+        rpy="0 0 0" />
+      <mass
+        value="0.221804775243313" />
+      <inertia
+        ixx="0.000211251147171327"
+        ixy="1.54955972003385E-19"
+        ixz="-1.88217327241839E-20"
+        iyy="0.000195922267849405"
+        iyz="-5.1966875772215E-20"
+        izz="0.000272151766439536" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wholeBodyURDF/meshes/st_br.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wholeBodyURDF/meshes/st_br.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="st_br"
+    type="continuous">
+    <origin
+      xyz="-0.178000000000001 -0.177999999999999 0.0269999999999998"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="st_br" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="wh_br">
+    <inertial>
+      <origin
+        xyz="0 2.77555756156289E-17 -1.38777878078145E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.764764182848667" />
+      <inertia
+        ixx="0.000394618318349911"
+        ixy="0"
+        ixz="-2.39690680958223E-18"
+        iyy="0.000394618318349911"
+        iyz="-1.41128220680051E-18"
+        izz="0.000674522009272522" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wholeBodyURDF/meshes/wh_br.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.686274509803922 0.658823529411765 0.63921568627451 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wholeBodyURDF/meshes/wh_br.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wh_br"
+    type="continuous">
+    <origin
+      xyz="0 0 0.015"
+      rpy="-1.5707963267949 -0.57401915441884 3.14159265358979" />
+    <parent
+      link="st_br" />
+    <child
+      link="wh_br" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="arm_y">
+    <inertial>
+      <origin
+        xyz="0.0609996816961276 0.0276969527606289 -0.0419922652659061"
+        rpy="0 0 0" />
+      <mass
+        value="0.726470638495085" />
+      <inertia
+        ixx="0.000427256684409531"
+        ixy="-4.94499408650023E-06"
+        ixz="-1.47689404175355E-05"
+        iyy="0.000915984224843616"
+        iyz="-3.46118593731465E-05"
+        izz="0.000755880517298889" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wholeBodyURDF/meshes/arm_y.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wholeBodyURDF/meshes/arm_y.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="arm_y"
+    type="prismatic">
+    <origin
+      xyz="-0.01 -0.03 0.238"
+      rpy="1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="arm_y" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="0"
+      upper="0.24"
+      effort="0"
+      velocity="0.628" />
+  </joint>
+  <link
+    name="arm_x">
+    <inertial>
+      <origin
+        xyz="-0.13600988754684 0.0156753810039397 0.0403235899544947"
+        rpy="0 0 0" />
+      <mass
+        value="0.403926513543648" />
+      <inertia
+        ixx="7.01329626668586E-05"
+        ixy="-2.89146989288094E-07"
+        ixz="5.06356873701848E-07"
+        iyy="0.00784738937393705"
+        iyz="3.88304508826301E-07"
+        izz="0.00782865271260482" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wholeBodyURDF/meshes/arm_x.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wholeBodyURDF/meshes/arm_x.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="arm_x"
+    type="prismatic">
+    <origin
+      xyz="0.239 -0.008 -0.094"
+      rpy="0 0 0" />
+    <parent
+      link="arm_y" />
+    <child
+      link="arm_x" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="0.33"
+      effort="0"
+      velocity="0.628" />
+  </joint>
+  <link
+    name="arm_theta">
+    <inertial>
+      <origin
+        xyz="-0.0313547861803388 3.34437389892805E-07 -0.0245135454254172"
+        rpy="0 0 0" />
+      <mass
+        value="0.244323369120914" />
+      <inertia
+        ixx="0.000467518886603794"
+        ixy="-2.72240490764472E-09"
+        ixz="-2.68526755260379E-06"
+        iyy="8.30220602981342E-05"
+        iyz="-3.65961708697028E-10"
+        izz="0.000499167069990237" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wholeBodyURDF/meshes/arm_theta.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wholeBodyURDF/meshes/arm_theta.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="arm_theta"
+    type="revolute">
+    <origin
+      xyz="0.017 -0.006 0.064"
+      rpy="-1.5708 0 0" />
+    <parent
+      link="arm_x" />
+    <child
+      link="arm_theta" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="0"
+      velocity="6.97" />
+  </joint>
+  <link
+    name="arm_fl">
+    <inertial>
+      <origin
+        xyz="-0.0387037248580023 -0.054788354097862 0.0170999999999999"
+        rpy="0 0 0" />
+      <mass
+        value="0.0537898277625993" />
+      <inertia
+        ixx="3.60749821809345E-05"
+        ixy="-1.87821335951942E-06"
+        ixz="-3.34833772471826E-21"
+        iyy="5.36362582511731E-06"
+        iyz="-2.20893519012188E-20"
+        izz="3.59719986476952E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wholeBodyURDF/meshes/arm_fl.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wholeBodyURDF/meshes/arm_fl.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="arm_fl"
+    type="prismatic">
+    <origin
+      xyz="-0.0183 0.07 -0.0095"
+      rpy="1.5708 0 1.5708" />
+    <parent
+      link="arm_theta" />
+    <child
+      link="arm_fl" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="0.067"
+      effort="0"
+      velocity="0.628" />
+  </joint>
+  <link
+    name="arm_fr">
+    <inertial>
+      <origin
+        xyz="-0.0387037248579974 -0.054788354097862 -0.0170999999999998"
+        rpy="0 0 0" />
+      <mass
+        value="0.0537898277625993" />
+      <inertia
+        ixx="3.60749821809345E-05"
+        ixy="-1.87821335951935E-06"
+        ixz="9.9863845409203E-22"
+        iyy="5.36362582511731E-06"
+        iyz="1.8021630985029E-20"
+        izz="3.59719986476952E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wholeBodyURDF/meshes/arm_fr.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wholeBodyURDF/meshes/arm_fr.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="arm_fr"
+    type="prismatic">
+    <origin
+      xyz="-0.0183 -0.07 -0.0095"
+      rpy="1.5708 0 -1.5708" />
+    <parent
+      link="arm_theta" />
+    <child
+      link="arm_fr" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="0"
+      upper="0.067"
+      effort="0"
+      velocity="0.628" />
+  </joint>
+  <link
+    name="real_sense">
+    <inertial>
+      <origin
+        xyz="1.66533453693773E-16 0.00249999999999995 -0.0124939870441668"
+        rpy="0 0 0" />
+      <mass
+        value="0.09971560426137" />
+      <inertia
+        ixx="1.01606371320999E-05"
+        ixy="-1.42136419735179E-20"
+        ixz="9.22459105367906E-21"
+        iyy="6.79256988925492E-05"
+        iyz="-8.50346426979379E-22"
+        izz="6.77076953219926E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wholeBodyURDF/meshes/real_sense.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wholeBodyURDF/meshes/real_sense.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="real_sense"
+    type="fixed">
+    <origin
+      xyz="0.025 0 -0.05"
+      rpy="-3.1416 0 -1.5708" />
+    <parent
+      link="arm_theta" />
+    <child
+      link="real_sense" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="lidar_f">
+    <inertial>
+      <origin
+        xyz="-0.0216371469729971 2.77555756156289E-16 0.0175000000000003"
+        rpy="0 0 0" />
+      <mass
+        value="0.0263437637432229" />
+      <inertia
+        ixx="8.01818206217676E-06"
+        ixy="-3.15418367345981E-20"
+        ixz="2.6391361782136E-21"
+        iyy="1.45077204086614E-05"
+        iyz="1.2260664369553E-22"
+        izz="2.20868397417844E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wholeBodyURDF/meshes/lidar_f.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wholeBodyURDF/meshes/lidar_f.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="lidar_f"
+    type="fixed">
+    <origin
+      xyz="0.205 0 0.0405"
+      rpy="3.1416 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="lidar_f" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="lidar_b">
+    <inertial>
+      <origin
+        xyz="-0.0216371469729972 1.66533453693773E-16 0.0175000000000001"
+        rpy="0 0 0" />
+      <mass
+        value="0.0263437637432229" />
+      <inertia
+        ixx="8.01818206217676E-06"
+        ixy="-2.59893462575715E-20"
+        ixz="9.01300691237274E-23"
+        iyy="1.45077204086613E-05"
+        iyz="-2.5019069915522E-23"
+        izz="2.20868397417844E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wholeBodyURDF/meshes/lidar_b.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wholeBodyURDF/meshes/lidar_b.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="lidar_b"
+    type="fixed">
+    <origin
+      xyz="-0.205 0 0.0405"
+      rpy="3.1416 0 -3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="lidar_b" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>
